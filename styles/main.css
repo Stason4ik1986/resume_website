@@ -1,15 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap");
+@import url("@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap')");
 
 :root {
+  --redColor: #ff0000ec;
+  --yellowColor: #ffc400;
+  --greenColor: #56cd32;
+
   --mainTextColor-light: #000;
-  --secondaryTextColor-light: rgb(51 51 51);
+  --secondaryTextColor-light: #333333;
   --mainLinkColor-light: #0da2b8;
-  --mainBorderColor-light: rgb(218, 218, 218);
-  --mainBgColor-light: rgb(249, 250, 251);
+  --mainBorderColor-light: #dadada;
+  --mainBgColor-light: #f9fafb;
 
   --mainTextColor-dark: #fff;
   --secondaryTextColor-dark: #adb0b1;
-  --mainLinkColor-dark: rgb(30, 190, 214);
+  --mainLinkColor-dark: #1ebed6;
   --mainBorderColor-dark: #2b3031;
   --mainBgColor-dark: #131415;
 
@@ -21,7 +25,8 @@
 }
 
 * {
-  font-family: "Readex Pro";
+  font-family: "Oxygen", sans-serif;
+  font-weight: 300;
   line-height: 1.5em;
   box-sizing: border-box;
   color: var(--mainTextColor);
@@ -48,15 +53,62 @@ li {
   line-height: 1.9em;
 }
 
+strong {
+  font-weight: 400;
+}
+
+.link--item {
+  display: flex;
+  color: var(--secondaryTextColor);
+  align-items: center;
+  transition: ease-in-out .3s;
+}
+
+.link--item:hover {
+  display: flex;
+  color: var(--mainTextColor);
+  align-items: center;
+}
+
+.link--item img {
+  margin-right: 0.5em;
+}
+
 #container--main {
   max-width: 700px;
   margin: 0 auto;
+  border-radius: 8px;
+  border: 1px solid var(--mainBorderColor);
+}
+
+#wrapper--header {
+  display: flex;
+  align-items: center;
   padding: 1em;
 }
 
+.header--dot {
+  width: 10px;
+  height: 10px;
+  display: block;
+  border-radius: 50%;
+  margin-right: 0.5em;
+}
+
+.header--dot_red {
+  background-color: var(--redColor);
+}
+
+.header--dot_yellow {
+  background-color: var(--yellowColor);
+}
+
+.header--dot_green {
+  background-color: var(--greenColor);
+}
+
 .section--page {
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding: 1em;
 }
 
 #wrapper--hero {
@@ -65,13 +117,9 @@ li {
   gap: 4em;
 }
 
-#bio,
-a {
-  font-weight: 300;
-}
-
 #user-name {
-  font-size: 48px;
+  font-size: 2em;
+  margin: 0;
   line-height: 1em;
 }
 
@@ -82,32 +130,9 @@ a {
   border-radius: 50%;
 }
 
-#email {
-  color: var(--mainTextColor);
-}
-
-#socials--list {
-  display: flex;
-  justify-content: space-between;
-  column-gap: 1em;
-  flex-wrap: wrap;
-}
-
-#socials--list a {
-  font-weight: 300;
-  color: var(--secondaryTextColor);
-  font-size: 0.9em;
-  transition: 0.3s;
-}
-
-#socials--list a:hover {
-  font-weight: 100;
-  color: var(--mainLinkColor);
-  font-size: 0.9em;
-}
-
 #qualifications--list {
   list-style: none;
+  padding: 0;
 }
 
 #wrapper--techstack__items {
@@ -140,23 +165,6 @@ a {
   padding-top: 1em;
   padding-bottom: 1em;
   border-top: 1px solid var(--mainBorderColor);
-}
-
-.card--project a {
-  color: var(--mainTextColor);
-  display: flex;
-  align-items: center;
-  transition: 0.3s;
-}
-
-.card--project img {
-  height: 1em;
-  width: 1em;
-  margin-right: 0.5em;
-}
-
-.card--project a:hover {
-  color: rgb(30, 190, 214);
 }
 
 @media (max-width: 600px) {
