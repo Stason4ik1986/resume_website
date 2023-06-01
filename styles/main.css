@@ -25,7 +25,7 @@
 }
 
 * {
-  font-family: "Oxygen", sans-serif;
+  font-family: 'Oxygen', sans-serif;
   font-weight: 300;
   line-height: 1.5em;
   box-sizing: border-box;
@@ -49,6 +49,11 @@ a {
   font-weight: 500;
 }
 
+ul {
+  padding: 0 0.75rem;
+  margin: 0;
+}
+
 li {
   line-height: 1.9em;
 }
@@ -57,11 +62,15 @@ strong {
   font-weight: 400;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .link--item {
   display: flex;
   color: var(--secondaryTextColor);
   align-items: center;
-  transition: ease-in-out .3s;
+  transition: ease-in-out 0.3s;
 }
 
 .link--item:hover {
@@ -108,7 +117,7 @@ strong {
 }
 
 .section--page {
-  padding: 1em;
+  padding: 0.5em 1em;
 }
 
 #wrapper--hero {
@@ -140,6 +149,7 @@ strong {
   flex-wrap: wrap;
   gap: 1em;
   font-size: 0.9em;
+  margin-bottom: 1rem;
 }
 
 .card--techstack {
